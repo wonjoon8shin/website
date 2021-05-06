@@ -6,6 +6,10 @@ app = Flask(__name__)
 def homepage():
     return render_template('index.html')
 
+@app.route('/Google_Stock_Prediction.html')
+def google_stock():
+    return render_template('/Google_Stock_Prediction.html')
+
 @app.route('/<string:page>')
 def webpage(page):
     return render_template(page)
