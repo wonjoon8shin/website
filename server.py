@@ -25,6 +25,8 @@ def stocks():
         data = request.form.to_dict() 
         email_sender.send_email(data["email"])
         return render_template('/thankyou.html')   
+    else:
+        'error'
 
 def save_data(data):
     with open('data.txt', mode='a') as database:
